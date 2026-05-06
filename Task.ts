@@ -96,8 +96,33 @@
         }
         return value * value
     }
+    // console.log(handleInput(5))
 
 
-    console.log(handleInput(5))
 
+
+
+
+    // Task-6
+
+    type User = {
+        name: string;
+        email: string
+    }
+    type Admin = {
+        adminLevel: number
+    }
+
+    type AdminUser = User & Admin
+
+    const describeAdmin = (user: AdminUser): string => {
+        return `${user.name} (${user.email}) is an Admin with level ${user.adminLevel}`
+    }
+
+    const user2: AdminUser = {
+        name: 'Karim',
+        email: 'karim@gmail.com',
+        adminLevel: 2
+    }
+    // console.log(describeAdmin(user2))
 }
