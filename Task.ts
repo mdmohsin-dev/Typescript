@@ -14,7 +14,7 @@
 
 
 
-    // TASK-3
+    // TASK-2
     type Person = {
         name: string;
         address: string,
@@ -40,7 +40,7 @@
 
 
 
-    // Task-4
+    // Task-3
     interface Book {
         title: string;
         author: string,
@@ -71,7 +71,17 @@
         publisher: 'ABC'
     }
 
-    console.log(person1)
-    console.log(person2)
+    // console.log(person1)
+    // console.log(person2)
 
+
+
+
+
+    // Task-4
+    const sum = (...numbers: number[]): number => {
+        const result = numbers.reduce((acc, cur) => acc + cur, 0)
+        return result
+    }
+//    console.log( sum(1, 2, 3, 4))
 }
