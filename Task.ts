@@ -160,4 +160,20 @@
         return name ?? 'Anonymous'
     }
     // console.log(getDisplayName(null))
+
+
+
+
+
+    // Task-9
+    const processData = (data: unknown) => {
+        if (typeof data === 'string') {
+            return data.toUpperCase()
+        }
+        else if (typeof data === 'number') {
+            return data * 2
+        }
+        throw new Error("Invalid data type")
+    }
+    console.log(processData('Bangladesh'))
 }
