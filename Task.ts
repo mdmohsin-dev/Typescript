@@ -125,4 +125,30 @@
         adminLevel: 2
     }
     // console.log(describeAdmin(user2))
+
+
+
+
+
+
+    // Task-7
+    type Employee = {
+        name: string;
+        address?: {
+            city?: string
+        }
+    }
+
+    const employee: Employee = {
+        name: "Rahim",
+        address: {
+            city: 'Dhaka'
+        }
+    }
+
+    const getEmployeeCity = (employee: Employee): string | undefined => {
+        return employee.address?.city
+    }
+
+    console.log(getEmployeeCity(employee))
 }
