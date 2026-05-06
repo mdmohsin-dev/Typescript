@@ -36,7 +36,7 @@
         skills: ['Javascript', 'Typescirpt', 'React', 'Mongodb'],
         maritalStatus: true
     }
-    console.log(person)
+    // console.log(person)
 
 
 
@@ -83,5 +83,21 @@
         const result = numbers.reduce((acc, cur) => acc + cur, 0)
         return result
     }
-//    console.log( sum(1, 2, 3, 4))
+    //    console.log( sum(1, 2, 3, 4))
+
+
+
+
+
+    // Task-5
+    const handleInput = (value: string | number): number => {
+        if (typeof value === 'string') {
+            return value.length
+        }
+        return value * value
+    }
+
+
+    console.log(handleInput(5))
+
 }
