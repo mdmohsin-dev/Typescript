@@ -149,6 +149,15 @@
     const getEmployeeCity = (employee: Employee): string | undefined => {
         return employee.address?.city
     }
+    // console.log(getEmployeeCity(employee))
 
-    console.log(getEmployeeCity(employee))
+
+
+
+
+    // Task-8
+    const getDisplayName = (name: string | null | undefined): string => {
+        return name ?? 'Anonymous'
+    }
+    // console.log(getDisplayName(null))
 }
