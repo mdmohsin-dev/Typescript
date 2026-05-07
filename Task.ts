@@ -183,7 +183,28 @@
 
     // Task-10
     const handleError = (message: string): never => {
-         throw new Error(message)
+        throw new Error(message)
     }
-    console.log(handleError('error message'))
+    // console.log(handleError('error message'))
+
+
+
+
+
+    // Task-11
+    type GenericArray<T> = Array<T>
+
+    const numbers: GenericArray<number> = [1, 2, 2, 3, 3, 4, 5]
+
+    const removeDuplicate = <T>(values: GenericArray<T>): GenericArray<T> => {
+        const result: GenericArray<T> = []
+        for (const item of values) {
+            if (!result.includes(item)) {
+                result.push(item)
+            }
+        }
+        return result
+    }
+    // console.log(removeDuplicate(numbers))
+    // console.log(removeDuplicate(['a','a','b']))
 }
