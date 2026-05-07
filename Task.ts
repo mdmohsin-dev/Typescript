@@ -175,5 +175,15 @@
         }
         throw new Error("Invalid data type")
     }
-    console.log(processData('Bangladesh'))
+    // console.log(processData('Bangladesh'))
+
+
+
+
+
+    // Task-10
+    const handleError = (message: string): never => {
+         throw new Error(message)
+    }
+    console.log(handleError('error message'))
 }
