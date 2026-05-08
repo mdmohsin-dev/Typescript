@@ -207,4 +207,23 @@
     }
     // console.log(removeDuplicate(numbers))
     // console.log(removeDuplicate(['a','a','b']))
+
+
+
+
+
+
+    // Task-12
+    const isString = (value: unknown): value is string => {
+        return typeof value === 'string'
+    }
+
+    const printUpperCase = (value: unknown): string => {
+        if (isString(value)) {
+            return value.toUpperCase()
+        }
+        else {
+            return 'Value is not string'
+        }
+    }
 }
