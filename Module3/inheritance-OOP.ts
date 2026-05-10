@@ -1,9 +1,9 @@
 {
 
-    class Student {
+    class Person {
         name: string;
         age: number;
-        address: string;
+        address: string
 
         constructor(name: string, age: number, address: string) {
             this.name = name, this.age = age, this.address = address
@@ -15,6 +15,14 @@
     }
 
 
+
+
+    class Student extends Person {
+        constructor(name: string, age: number, address: string) {
+            super(name, age, address)
+        }
+    }
+
     // Instance
     const student1 = new Student('Mr x', 18, 'Kishoreganj')
     console.log(student1)
@@ -22,25 +30,19 @@
 
 
 
-    class Teacher {
-        name: string;
-        age: number;
-        address: string;
-        designation: string
-
+    class Teacher extends Person {
+        designation: string;
         constructor(name: string, age: number, address: string, designation: string) {
-            this.name = name, this.age = age, this.address = address, this.designation = designation
+            super(name, age, address)
+            this.designation = designation
         }
-
-        getSleep(hours: number) {
-            console.log(`${this.name} is sleeping for ${hours} hours`)
-        }
+        
 
         takeClass(numOfClass: number) {
             console.log(`${this.name} will take ${numOfClass}`)
         }
     }
 
-
-     const teacher1 = new Teacher('Mr teacher', 18, 'Dhaka','Professors')
+    const teacher1 = new Teacher('Mr teacher', 18, 'Dhaka', 'Professors')
+    teacher1.getSleep(5)
 }
